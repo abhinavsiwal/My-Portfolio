@@ -3,41 +3,53 @@ import { createTheme } from "@material-ui/core/styles";
 //white
 const theme = {
   primary: "#F3EFFF",
-  secondary: "#6A35FF",
-  text: "#2D3958",
+  secondary: "#2D3958",
+  text: "#6A35FF",
 };
 
 //Pinkish
 const theme1 = {
   primary: "#FFE4D5",
-  secondary: "#ACCBD2",
-  text: "#000000",
+  secondary: "#000000",
+  text: "#006d77",
 };
 //LightBluish
 const theme2 = {
   primary: "#D8F4FF",
-  secondary: "#E63956",
-  text: "#110F48",
+  secondary: "#110F48",
+  text: "#E63956",
 };
 
 //Greenish
 const theme3 = {
   primary: "#c0ecb1",
-  secondary: "#F4F9FC",
-  text: "#0A1C2F",
+  secondary: "#0A1C2F",
+  text: "#006d77",
 };
 
 // DarkBlue
 const theme4 = {
   primary: "#11183f",
-  secondary: "#13CAE6",
-  text: "#EEF2F6",
+  secondary: "#EEF2F6",
+  text: "#13CAE6",
 };
 
 const theme5 = {
   primary: "#1f2833",
-  secondary: "#66fcf1",
-  text: "#c5c6c7",
+  text: "#66fcf1",
+  secondary: "#c5c6c7",
+};
+
+const universal = {
+  lightBlue: "#85dcb",
+  apricot: "#fac9b8",
+  peach: "#ffed86",
+  pink: "ffadad",
+  purple: "#7450e9",
+  blueGreen: "#006d77",
+  green: "#52b788",
+  lightGreen: "#d8f3dc",
+  neon: "#ACCBD2",
 };
 
 const Theme = createTheme({
@@ -46,8 +58,7 @@ const Theme = createTheme({
       main: theme.primary,
     },
     secondary: {
-      // main: theme.secondary,
-      main: theme.text,
+      main: theme.secondary,
     },
     text: {
       main: theme.text,
@@ -61,27 +72,25 @@ const Theme = createTheme({
     boxShadow: "inset 5px 5px 14px #bbb8c4",
     inset: "-5px -5px 14px #ffffff",
   },
-  typography:{
-    h5:{
-      color:theme.text,
-      fontSize:"1.5rem",
-      fontWeigth:400,
-      fontFamily:"pacifico"
-    }
-  }
+  typography: {
+    h3: {
+      fontFamily: "raleway",
+      fontWeight: "600",
+      fontSize: "3.5rem",
+      color: theme.secondary,
+    },
+    h4: {
+      fontFamily: "raleway",
+      fontWeight: 1000,
+      color: universal.green,
+    },
+    h5: {
+      fontSize: "1.5rem",
+      color: theme.text,
+      fontFamily: "pacifico",
+    },
+  },
 });
-
-const universal={
-  lightBlue:"#85dcb",
-  apricot:"#fac9b8",
-  peach:"#ffed86",
-  pink:"ffadad",
-  purple:"#7450e9",
-  blueGreen:"#006d77",
-  green:"#52b788",
-  lightGreen:"#d8f3dc",
-  
-}
 
 export const Theme1 = createTheme({
   palette: {
@@ -89,8 +98,7 @@ export const Theme1 = createTheme({
       main: theme1.primary,
     },
     secondary: {
-      // main: theme1.secondary,
-      main: theme1.text,
+      main: theme1.secondary,
     },
     text: {
       main: theme1.text,
@@ -99,28 +107,39 @@ export const Theme1 = createTheme({
       main: theme1.text,
     },
   },
-  typography:{
-    h5:{
-      color:theme1.text,
-      fontSize:"1.5rem",
-      fontWeigth:400,
-      fontFamily:"pacifico"
-    }
+  typography: {
+    h3: {
+      fontFamily: "raleway",
+      fontWeight: "600",
+      fontSize: "3.5rem",
+      color: theme1.secondary,
+    },
+    h4: {
+      fontFamily: "raleway",
+      fontWeight: 1000,
+      color: universal.green,
+    },
+    h5: {
+      color: theme1.text,
+      fontSize: "1.5rem",
+      fontWeigth: 400,
+      fontFamily: "pacifico",
+    },
   },
   border: {
     background: "#ffe4d5",
-    boxShadow: "inset 11px 11px 19px #dbc4b7",
-    inset: "-11px -11px 19px #fffff3",
+    boxShadow: "inset 15px 15px 30px #d9c2b5",
+    inset: "-15px -15px 30px #fffff5",
   },
 });
+
 export const Theme2 = createTheme({
   palette: {
     primary: {
       main: theme2.primary,
     },
     secondary: {
-      // main: theme2.secondary,
-      main: theme2.text,
+      main: theme2.secondary,
     },
     text: {
       main: theme2.text,
@@ -129,13 +148,24 @@ export const Theme2 = createTheme({
       main: theme2.text,
     },
   },
-  typography:{
-    h5:{
-      color:theme2.text,
-      fontSize:"1.5rem",
-      fontWeigth:400,
-      fontFamily:"pacifico"
-    }
+  typography: {
+    h3: {
+      fontFamily: "raleway",
+      fontWeight: "600",
+      fontSize: "3.5rem",
+      color: theme2.secondary,
+    },
+    h4: {
+      fontFamily: "raleway",
+      fontWeight: 1000,
+      color: universal.green,
+    },
+    h5: {
+      color: theme2.text,
+      fontSize: "1.5rem",
+      fontWeigth: 400,
+      fontFamily: "pacifico",
+    },
   },
   border: {
     background: "#d8f4ff",
@@ -143,14 +173,14 @@ export const Theme2 = createTheme({
     inset: "-9px -9px 20px #ffffff",
   },
 });
+
 export const Theme3 = createTheme({
   palette: {
     primary: {
       main: theme3.primary,
     },
     secondary: {
-      // main: theme3.secondary,
-      main: theme3.text,
+      main: theme3.secondary,
     },
     text: {
       main: theme3.text,
@@ -164,14 +194,25 @@ export const Theme3 = createTheme({
     boxShadow: "inset 9px 9px 20px #92b387",
     inset: "-9px -9px 20px #eeffdb",
   },
-  typography:{
-    h5:{
-      color:theme3.text,
-      fontSize:"1.5rem",
-      fontWeigth:400,
-      fontFamily:"pacifico"
-    }
-  }
+  typography: {
+    h3: {
+      fontFamily: "raleway",
+      fontWeight: "600",
+      fontSize: "3.5rem",
+      color: theme3.secondary,
+    },
+    h4: {
+      fontFamily: "raleway",
+      fontWeight: 1000,
+      color: universal.green,
+    },
+    h5: {
+      color: theme3.text,
+      fontSize: "1.5rem",
+      fontWeigth: 400,
+      fontFamily: "pacifico",
+    },
+  },
 });
 export const Theme4 = createTheme({
   palette: {
@@ -179,8 +220,7 @@ export const Theme4 = createTheme({
       main: theme4.primary,
     },
     secondary: {
-      // main: theme4.secondary,
-      main: theme4.text,
+      main: theme4.secondary,
     },
     text: {
       main: theme4.text,
@@ -189,13 +229,24 @@ export const Theme4 = createTheme({
       main: theme4.text,
     },
   },
-  typography:{
-    h5:{
-      color:theme4.text,
-      fontSize:"1.5rem",
-      fontWeigth:400,
-      fontFamily:"pacifico"
-    }
+  typography: {
+    h3: {
+      fontFamily: "raleway",
+      fontWeight: "600",
+      fontSize: "3.5rem",
+      color: theme4.secondary,
+    },
+    h4: {
+      fontFamily: "raleway",
+      fontWeight: 1000,
+      color: universal.green,
+    },
+    h5: {
+      color: theme4.text,
+      fontSize: "1.5rem",
+      fontWeigth: 400,
+      fontFamily: "pacifico",
+    },
   },
   border: {
     background: "#11183f",
@@ -209,8 +260,7 @@ export const Theme5 = createTheme({
       main: theme5.primary,
     },
     secondary: {
-      // main: theme5.secondary,
-      main: theme5.text,
+      main: theme5.secondary,
     },
     text: {
       main: theme5.text,
@@ -219,13 +269,24 @@ export const Theme5 = createTheme({
       main: theme5.text,
     },
   },
-  typography:{
-    h5:{
-      color:theme5.text,
-      fontSize:"1.5rem",
-      fontWeigth:400,
-      fontFamily:"pacifico"
-    }
+  typography: {
+    h3: {
+      fontFamily: "raleway",
+      fontWeight: "600",
+      fontSize: "3.5rem",
+      color: theme5.secondary,
+    },
+    h4: {
+      fontFamily: "raleway",
+      fontWeight: 1000,
+      color: universal.green,
+    },
+    h5: {
+      color: theme5.text,
+      fontSize: "1.5rem",
+      fontWeigth: 400,
+      fontFamily: "pacifico",
+    },
   },
   border: {
     background: "#1f2833",
