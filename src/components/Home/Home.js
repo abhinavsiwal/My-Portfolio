@@ -1,12 +1,19 @@
 import React from "react";
-import { Grid, Typography, Button, useMediaQuery,Container,Hidden } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  Button,
+  useMediaQuery,
+  Container,
+  Hidden,
+} from "@material-ui/core";
 import { motion } from "framer-motion";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 // import ThemeContext from "../../store/store";
 import Lottie from "react-lottie";
-import homeAnimation from "../../animations/home.json";
+import homeAnimation from "../../animations/person2.json";
 import rocketAnimation from "../../animations/tree.json";
-import animation from '../../animations/parachute.json'
+import animation from "../../animations/parachute.json";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -17,16 +24,16 @@ const useStyles = makeStyles((theme) => ({
   animationContainer: {
     ...theme.border,
     maxHeight: "31em",
-    maxWidth: "31em",
+    maxWidth: "34em",
     borderRadius: "30px",
     [theme.breakpoints.down("sm")]: {
       maxHeight: "26em",
       maxWidth: "26em",
     },
-    [theme.breakpoints.down("xs")]:{
+    [theme.breakpoints.down("xs")]: {
       maxHeight: "19em",
       maxWidth: "19em",
-    }
+    },
   },
   rocketDiv: {
     heigth: "12em",
@@ -45,13 +52,13 @@ const useStyles = makeStyles((theme) => ({
     padding: "1rem",
     fontWeight: 600,
   },
-  animationDiv:{
-    position:"absolute",
-    top:"5px",
-    left:"20em",
-    width:"14em",
-    height:"8em"
-  }
+  animationDiv: {
+    position: "absolute",
+    top: "5px",
+    left: "20em",
+    width: "14em",
+    height: "8em",
+  },
 }));
 
 const defaultOptions = {
@@ -91,10 +98,10 @@ const Home = (props) => {
     <React.Fragment>
       <Grid
         container
-        direction={matchesSM?"column":"row"}
+        direction={matchesSM ? "column" : "row"}
         className={classes.container}
         style={{ margin: 0 }}
-        justifyContent={matchesSM?"flex-start":"center"}
+        justifyContent={matchesSM ? "space-around" : "center"}
         alignItems="center"
       >
         <Grid item container md>
@@ -106,7 +113,7 @@ const Home = (props) => {
             style={{
               marginLeft: matchesSM ? 0 : "4em",
               marginBottom: matchesSM ? "2em" : 0,
-              marginTop:matchesSM?"4em":0,
+              marginTop: matchesSM ? "4em" : 0,
             }}
           >
             <Grid
@@ -116,7 +123,18 @@ const Home = (props) => {
               animate={{ x: 0 }}
               transition={{ duration: 1 }}
             >
-              <Typography variant="h5" style={{fontSize: matchesSM ? matchesXS?"0.9rem":"1.2rem": "1.5rem",}}>Hello</Typography>
+              <Typography
+                variant="h5"
+                style={{
+                  fontSize: matchesSM
+                    ? matchesXS
+                      ? "1.2rem"
+                      : "1.3rem"
+                    : "1.5rem",
+                }}
+              >
+                Hello
+              </Typography>
             </Grid>
             <Grid
               item
@@ -131,7 +149,7 @@ const Home = (props) => {
                   fontWeight: "400",
                   fontSize: matchesSM
                     ? matchesXS
-                      ? "1.5rem"
+                      ? "2rem"
                       : "2.5rem"
                     : "3.5rem",
                 }}
@@ -141,7 +159,11 @@ const Home = (props) => {
                   style={{
                     color: `${theme.palette.text.main}`,
                     fontFamily: "pacifico",
-                    fontSize: matchesSM ? matchesXS?"2rem":"3rem": "4rem",
+                    fontSize: matchesSM
+                      ? matchesXS
+                        ? "2.4rem"
+                        : "3rem"
+                      : "4rem",
                   }}
                 >
                   Abhinav Siwal
@@ -155,7 +177,19 @@ const Home = (props) => {
               animate={{ x: 0 }}
               transition={{ duration: 1, delay: 1 }}
             >
-              <Typography variant="h4" style={{fontSize: matchesSM ? matchesXS?"1.5rem":"2rem": "3rem"}}>A Full Stack Web Developer</Typography>
+              <Typography
+              align={matchesXS?"center":undefined}
+                variant="h4"
+                style={{
+                  fontSize: matchesSM
+                    ? matchesXS
+                      ? "1.8rem"
+                      : "2rem"
+                    : "3rem",
+                }}
+              >
+                A Full Stack Web Developer
+              </Typography>
             </Grid>
             <Grid
               item
@@ -171,26 +205,48 @@ const Home = (props) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item container md justifyContent="center" alignItems="center">
-          <Grid item container className={classes.animationContainer} justifyContent="center" alignItems="center">
+        <Grid item container md justifyContent="center" alignItems="center" style={{marginTop:matchesXS?"2em":0}}>
+          <Grid
+            item
+            container
+            className={classes.animationContainer}
+            justifyContent="center"
+            alignItems="center"
+          >
             <Lottie
               options={defaultOptions}
-              height={matchesMD ? (matchesSM ? matchesXS?"18em":"18em" : "25em") : "30em"}
-              width={matchesMD ? (matchesSM ? matchesXS?"18em":"18em" : "25em") : "30em"}
+              height={
+                matchesMD
+                  ? matchesSM
+                    ? matchesXS
+                      ? "18em"
+                      : "19em"
+                    : "25em"
+                  : "28em"
+              }
+              width={
+                matchesMD
+                  ? matchesSM
+                    ? matchesXS
+                      ? "18em"
+                      : "25em"
+                    : "25em"
+                  : "33em"
+              }
             />
           </Grid>
         </Grid>
       </Grid>
       <Hidden mdDown>
-      <Container className={classes.rocketDiv}>
-      <Lottie options={rocketOptions} height={'12em'} width={"12em"}/>
-    </Container>
-    </Hidden>
+        <Container className={classes.rocketDiv}>
+          <Lottie options={rocketOptions} height={matchesSM?"10em":"12em"} width={matchesSM?"10em":"12em"} />
+        </Container>
+      </Hidden>
       <Hidden mdDown>
-      <Container className={classes.animationDiv}>
-      <Lottie options={options} height={'8em'} width={"14em"}/>
-    </Container>
-    </Hidden>
+        <Container className={classes.animationDiv}>
+          <Lottie options={options} height={matchesSM?"6em":"8em"} width={matchesSM?"10em":"14em"} />
+        </Container>
+      </Hidden>
     </React.Fragment>
   );
 };

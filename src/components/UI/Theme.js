@@ -4,7 +4,7 @@ import { createTheme } from "@material-ui/core/styles";
 const theme = {
   primary: "#F3EFFF",
   secondary: "#2D3958",
-  text: "#6A35FF",
+  text: "#6f5de0",
 };
 
 //Pinkish
@@ -89,6 +89,18 @@ const Theme = createTheme({
       color: theme.text,
       fontFamily: "pacifico",
     },
+    h6:{
+      fontSize:"1.3rem",
+      color:theme.secondary,
+      fontWeight:"500",
+      fontFamily:"raleway"
+    },
+    body1:{
+      color:theme.secondary,
+      fontSize:"1rem",
+      fontWeight:500,
+      fontFamily:"raleway"
+    }
   },
 });
 
@@ -125,6 +137,18 @@ export const Theme1 = createTheme({
       fontWeigth: 400,
       fontFamily: "pacifico",
     },
+    h6:{
+      fontSize:"1.3rem",
+      color:theme1.secondary,
+      fontWeight:"500",
+      fontFamily:"raleway"
+    },
+    body1:{
+      color:theme1.secondary,
+      fontSize:"1rem",
+      fontWeight:500,
+      fontFamily:"raleway"
+    }
   },
   border: {
     background: "#ffe4d5",
@@ -166,6 +190,18 @@ export const Theme2 = createTheme({
       fontWeigth: 400,
       fontFamily: "pacifico",
     },
+    h6:{
+      fontSize:"1.3rem",
+      color:theme2.secondary,
+      fontWeight:"500",
+      fontFamily:"raleway"
+    },
+    body1:{
+      color:theme2.secondary,
+      fontSize:"1rem",
+      fontWeight:500,
+      fontFamily:"raleway"
+    }
   },
   border: {
     background: "#d8f4ff",
@@ -212,6 +248,18 @@ export const Theme3 = createTheme({
       fontWeigth: 400,
       fontFamily: "pacifico",
     },
+    h6:{
+      fontSize:"1.3rem",
+      color:theme3.secondary,
+      fontWeight:"500",
+      fontFamily:"raleway"
+    },
+    body1:{
+      color:theme3.secondary,
+      fontSize:"1rem",
+      fontWeight:500,
+      fontFamily:"raleway"
+    }
   },
 });
 export const Theme4 = createTheme({
@@ -247,6 +295,18 @@ export const Theme4 = createTheme({
       fontWeigth: 400,
       fontFamily: "pacifico",
     },
+    h6:{
+      fontSize:"1.3rem",
+      color:theme4.secondary,
+      fontWeight:"500",
+      fontFamily:"raleway"
+    },
+    body1:{
+      color:"#fff",
+      fontSize:"1rem",
+      fontWeight:500,
+      fontFamily:"raleway"
+    }
   },
   border: {
     background: "#11183f",
@@ -287,6 +347,18 @@ export const Theme5 = createTheme({
       fontWeigth: 400,
       fontFamily: "pacifico",
     },
+    h6:{
+      fontSize:"1.3rem",
+      color:theme5.secondary,
+      fontWeight:"700",
+      fontFamily:"raleway"
+    },
+    body1:{
+      color:"#fff",
+      fontSize:"1rem",
+      fontWeight:500,
+      fontFamily:"raleway"
+    }
   },
   border: {
     background: "#1f2833",

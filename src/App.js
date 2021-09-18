@@ -8,6 +8,7 @@ import { Theme1, Theme2, Theme3, Theme4, Theme5 } from "./components/UI/Theme";
 import ThemeContext from "./store/store";
 import ThemeSetting from "./components/Header/ThemeSetting";
 import NavModal from "./components/Header/NavModal";
+import About from "./components/About/About";
 
 const App = () => {
   const themeCtx = useContext(ThemeContext);
@@ -45,7 +46,7 @@ const App = () => {
           {!showNavModal && <Home />}
         </Route>
         <Route path="/about" exact>
-          <div>About</div>
+         <About />
         </Route>
         <Route path="/services" exact>
           <div>Services</div>

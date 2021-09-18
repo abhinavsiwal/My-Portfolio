@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Link } from "react-router-dom";
 import { Grid, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles,useTheme } from "@material-ui/core/styles";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeContext from "../../store/store";
 
 const useStyles = makeStyles((theme) => ({
   modalContainer: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   // },
   navText: {
     fontFamily: "pacifico",
-    color: theme.palette.text.main,
+    color: theme.palette.secondary.main,
     fontWeight: 800,
     fontSize: "1rem",
     ...theme.border,
@@ -103,6 +104,9 @@ const navVariants = {
 
 const NavModal = (props) => {
   const classes = useStyles();
+  const theme=useTheme();
+  const themeCtx = useContext(ThemeContext);
+  const {active,changeActiveValue}=themeCtx;
   return (
     <AnimatePresence>
         <Grid
@@ -135,10 +139,8 @@ const NavModal = (props) => {
                 component={Link}
                 to="/"
                 className={classes.navText}
-                onClick={() => {
-                  props.setShowNavModal(false);
-                }}
-       
+                onClick={() => {props.setShowNavModal(false);changeActiveValue(0)}}
+                style={{color:active===0?theme.palette.text.main:"inherit"}}
               >
                 Home
               </Button>
@@ -161,9 +163,8 @@ const NavModal = (props) => {
                 className={classes.navText}
                 component={Link}
                 to="/about"
-                onClick={() => {
-                  props.setShowNavModal(false);
-                }}
+                onClick={() => {props.setShowNavModal(false);changeActiveValue(1)}}
+                style={{color:active===1?theme.palette.text.main:"inherit"}}
             
               >
                 About
@@ -186,9 +187,8 @@ const NavModal = (props) => {
                 className={classes.navText}
                 component={Link}
                 to="/services"
-                onClick={() => {
-                  props.setShowNavModal(false);
-                }}
+                onClick={() => {props.setShowNavModal(false);changeActiveValue(2)}}
+                style={{color:active===2?theme.palette.text.main:"inherit"}}
       
               >
                 Services
@@ -211,9 +211,8 @@ const NavModal = (props) => {
                 className={classes.navText}
                 component={Link}
                 to="/portfolio"
-                onClick={() => {
-                  props.setShowNavModal(false);
-                }}
+                onClick={() => {props.setShowNavModal(false);changeActiveValue(3)}}
+                style={{color:active===3?theme.palette.text.main:"inherit"}}
     
               >
                 Portfolio
@@ -237,9 +236,8 @@ const NavModal = (props) => {
                 className={classes.navText}
                 component={Link}
                 to="/contact"
-                onClick={() => {
-                  props.setShowNavModal(false);
-                }}
+                onClick={() => {props.setShowNavModal(false);changeActiveValue(4)}}
+                style={{color:active===4?theme.palette.text.main:"inherit"}}
            
               >
                 Contact
