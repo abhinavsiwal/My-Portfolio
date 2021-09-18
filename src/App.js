@@ -9,6 +9,7 @@ import ThemeContext from "./store/store";
 import ThemeSetting from "./components/Header/ThemeSetting";
 import NavModal from "./components/Header/NavModal";
 import About from "./components/About/About";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 const App = () => {
   const themeCtx = useContext(ThemeContext);
@@ -46,13 +47,13 @@ const App = () => {
           {!showNavModal && <Home />}
         </Route>
         <Route path="/about" exact>
-         <About />
+        {!showNavModal && <About />}
         </Route>
         <Route path="/services" exact>
           <div>Services</div>
         </Route>
         <Route path="/portfolio" exact>
-          <div>Portfolio</div>
+        {!showNavModal && <Portfolio />}
         </Route>
         <Route path="/contact" exact>
           <div>Contact</div>

@@ -41,7 +41,7 @@ export const ThemeContextProvider=(props)=>{
             default:
                 break;
         }
-    }, [])
+    }, [active])
 
     const changeTheme=(value)=>{
         setTheme(value);

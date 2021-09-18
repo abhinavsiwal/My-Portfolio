@@ -1,4 +1,5 @@
 import React,{useContext} from "react";
+import {createPortal} from 'react-dom';
 import { Link } from "react-router-dom";
 import { Grid, Button } from "@material-ui/core";
 import { makeStyles,useTheme } from "@material-ui/core/styles";
@@ -7,7 +8,7 @@ import ThemeContext from "../../store/store";
 
 const useStyles = makeStyles((theme) => ({
   modalContainer: {
-    positon: "fixed",
+    positon: "absolute",
     top: 0,
     height: "100vh",
     width: "100%",
@@ -108,6 +109,8 @@ const NavModal = (props) => {
   const themeCtx = useContext(ThemeContext);
   const {active,changeActiveValue}=themeCtx;
   return (
+    <React.Fragment>
+    {createPortal(
     <AnimatePresence>
         <Grid
           container
@@ -244,7 +247,9 @@ const NavModal = (props) => {
               </Button>
             </Grid>
         </Grid>
-    </AnimatePresence>
+    </AnimatePresence>,document.getElementById('navModal')
+    )}     
+          </React.Fragment>
   );
 };
 
