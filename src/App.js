@@ -10,6 +10,7 @@ import ThemeSetting from "./components/Header/ThemeSetting";
 import NavModal from "./components/Header/NavModal";
 import About from "./components/About/About";
 import Portfolio from "./components/Portfolio/Portfolio";
+import Contact from "./components/Contact/Contact";
 
 const App = () => {
   const themeCtx = useContext(ThemeContext);
@@ -36,7 +37,7 @@ const App = () => {
   }
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme?theme:Theme}>
       <ThemeSetting
         setShowNavModal={setShowNavModal}
         showNavModal={showNavModal}
@@ -49,14 +50,11 @@ const App = () => {
         <Route path="/about" exact>
         {!showNavModal && <About />}
         </Route>
-        <Route path="/services" exact>
-          <div>Services</div>
-        </Route>
         <Route path="/portfolio" exact>
         {!showNavModal && <Portfolio />}
         </Route>
         <Route path="/contact" exact>
-          <div>Contact</div>
+          <Contact />
         </Route>
 
       </Switch>

@@ -65,8 +65,8 @@ const useStyles = makeStyles((theme) => ({
     zIndex:1400,
     backgroundColor:theme.palette.primary.main,
     [theme.breakpoints.down("xs")]:{
-      height:"4em",
-      width:"14em",
+      height:"5em",
+      width:"15em",
     }
   },
   colorButton: {
@@ -79,35 +79,14 @@ const useStyles = makeStyles((theme) => ({
       cursor: "pointer",
     },
     [theme.breakpoints.down("xs")]:{
-      height: "24px",
-      width: "26px",
+      height: "26px",
+      width: "28px",
       marginRight: "0.5rem",
     }
   },
 }));
 
-const drawerVariants = {
-  open: {
-    x: -305,
-    transition: {
-      x: {
-        type: "spring",
-        duration: 1,
-      },
-      delayChildren:1.2,
-      staggerChildren:0.5,
-    },
-  },
-  close: {
-    x: 0,
-    transition: {
-      x: {
-        type: "spring",
-        duration: 1,
-      },
-    },
-  },
-};
+
 
 const ThemeSetting = (props) => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -115,13 +94,37 @@ const ThemeSetting = (props) => {
   const classes = useStyles();
   const theme = useTheme();
   const matchesXS=useMediaQuery(theme.breakpoints.down("xs"));
+
+  const drawerVariants = {
+    open: {
+      x: matchesXS?-270 :-300,
+      transition: {
+        x: {
+          type: "spring",
+          duration: 1,
+        },
+        delayChildren:1.2,
+        staggerChildren:0.5,
+      },
+    },
+    close: {
+      x: 0,
+      transition: {
+        x: {
+          type: "spring",
+          duration: 1,
+        },
+      },
+    },
+  };
+
   return (
 
     <Grid
       container
       direction="column"
       className={classes.navContainer}
-      justifyContent={matchesXS?"flex-start":"space-between"}
+      justifyContent={matchesXS?"space-between":"space-between"}
       alignItems="flex-start"
     >
       <Grid item>

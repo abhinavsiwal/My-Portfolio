@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   mainContainer: {
     backgroundColor: theme.palette.primary.main,
     height: "100%",
+    minHeight:"100vh",
     width: "100%",
     padding: "1rem",
     // margin:"1rem",
@@ -34,16 +35,16 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: "2rem",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "23em",
-      height: "23em",
+      width: "22em",
+      height: "22em",
     },
   },
   aboutImg: {
     height: "28em",
     width: "28em",
     [theme.breakpoints.down("xs")]: {
-      width: "21em",
-      height: "21em",
+      width: "20em",
+      height: "20em",
     },
   },
   active: {

@@ -6,6 +6,7 @@ import {
   useMediaQuery,
   Container,
   Hidden,
+  IconButton,
 } from "@material-ui/core";
 import { motion } from "framer-motion";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -15,11 +16,18 @@ import homeAnimation from "../../animations/person2.json";
 import rocketAnimation from "../../animations/tree.json";
 import animation from "../../animations/parachute.json";
 
+import InstagramIcon from "@material-ui/icons/Instagram";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import TwitterIcon from "@material-ui/icons/Twitter";
+
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: "100vh",
+    height: "100%",
+    minHeight:"100vh",
     width: "100%",
     backgroundColor: theme.palette.primary.main,
+    paddingBottom:"2rem"
   },
   animationContainer: {
     ...theme.border,
@@ -112,8 +120,8 @@ const Home = (props) => {
             alignItems={matchesSM ? "center" : "flex-start"}
             style={{
               marginLeft: matchesSM ? 0 : "4em",
-              marginBottom: matchesSM ? "2em" : 0,
-              marginTop: matchesSM ? "4em" : 0,
+              marginBottom: matchesSM ? "1em" : 0,
+              marginTop: matchesSM ? "2em" : 0,
             }}
           >
             <Grid
@@ -178,7 +186,7 @@ const Home = (props) => {
               transition={{ duration: 1, delay: 1 }}
             >
               <Typography
-              align={matchesXS?"center":undefined}
+                align={matchesXS ? "center" : undefined}
                 variant="h4"
                 style={{
                   fontSize: matchesSM
@@ -203,9 +211,76 @@ const Home = (props) => {
                 More about me
               </Button>
             </Grid>
+            <Grid item>
+              <Grid container direction="row" style={{ marginTop: "1rem" }} component={motion.div} initial={{x:"-900px"}} animate={{x:0}} transition={{duration:1,delay:2}}>
+                <Grid item>
+                  <IconButton
+                    component="a"
+                    href="https://www.instagram.com/abhinav_siwal8/"
+                    target="_blank"
+                  >
+                    <InstagramIcon
+                      style={{
+                        fontSize: "2rem",
+                        color: theme.palette.text.main,
+                      }}
+                    />
+                  </IconButton>
+                </Grid>
+                <Grid item>
+                  <IconButton
+                    component="a"
+                    href="https://www.linkedin.com/in/abhinav-siwal-a9a3591aa/"
+                    target="_blank"
+                  >
+                    <LinkedInIcon
+                      style={{
+                        fontSize: "2rem",
+                        color: theme.palette.text.main,
+                      }}
+                    />
+                  </IconButton>
+                </Grid>
+                <Grid item>
+                  <IconButton
+                    component="a"
+                    href="https://www.facebook.com/abhinavsiwal77/"
+                    target="_blank"
+                  >
+                    <FacebookIcon
+                      style={{
+                        fontSize: "2rem",
+                        color: theme.palette.text.main,
+                      }}
+                    />
+                  </IconButton>
+                </Grid>
+                <Grid item>
+                  <IconButton
+                    component="a"
+                    href="https://twitter.com/AbhinavSiwal"
+                    target="_blank"
+                  >
+                    <TwitterIcon
+                      style={{
+                        fontSize: "2rem",
+                        color: theme.palette.text.main,
+                      }}
+                    />
+                  </IconButton>
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
-        <Grid item container md justifyContent="center" alignItems="center" style={{marginTop:matchesXS?"2em":0}}>
+        <Grid
+          item
+          container
+          md
+          justifyContent="center"
+          alignItems="center"
+          style={{ marginTop: matchesXS ? "1em" : 0 }}
+        >
           <Grid
             item
             container
@@ -239,12 +314,20 @@ const Home = (props) => {
       </Grid>
       <Hidden mdDown>
         <Container className={classes.rocketDiv}>
-          <Lottie options={rocketOptions} height={matchesSM?"10em":"12em"} width={matchesSM?"10em":"12em"} />
+          <Lottie
+            options={rocketOptions}
+            height={matchesSM ? "10em" : "12em"}
+            width={matchesSM ? "10em" : "12em"}
+          />
         </Container>
       </Hidden>
       <Hidden mdDown>
         <Container className={classes.animationDiv}>
-          <Lottie options={options} height={matchesSM?"6em":"8em"} width={matchesSM?"10em":"14em"} />
+          <Lottie
+            options={options}
+            height={matchesSM ? "6em" : "8em"}
+            width={matchesSM ? "10em" : "14em"}
+          />
         </Container>
       </Hidden>
     </React.Fragment>

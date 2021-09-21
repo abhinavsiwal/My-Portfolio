@@ -3,7 +3,7 @@ import {createPortal} from 'react-dom';
 import { Link } from "react-router-dom";
 import { Grid, Button } from "@material-ui/core";
 import { makeStyles,useTheme } from "@material-ui/core/styles";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import ThemeContext from "../../store/store";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     width: "100%",
     background: theme.palette.primary.main,
+    paddingTop:"8em"
   },
   // navItem: {
   //   ...theme.border,
@@ -73,35 +74,7 @@ const divVariants = {
     },
   },
 };
-const navVariants = {
-  out: {
-    x: "-100vw",
-    transition: {
-      x: {
-        duration: 2,
-        delay: 2,
-      },
-    },
-  },
-  in: {
-    x: 0,
-    transition: {
-      x: {
-        duration: 1,
-        delay: 2,
-      },
-    },
-  },
-  exit: {
-    x: "100vw",
-    transition: {
-      x: {
-        duration: 2,
-        delay: 2,
-      },
-    },
-  },
-};
+
 
 const NavModal = (props) => {
   const classes = useStyles();
@@ -111,7 +84,6 @@ const NavModal = (props) => {
   return (
     <React.Fragment>
     {createPortal(
-    <AnimatePresence>
         <Grid
           container
           direction="column"
@@ -131,12 +103,6 @@ const NavModal = (props) => {
               justifyContent="center"
               alignItems="center"
               className={classes.navItem}
-              component={motion.div}
-              variants={navVariants}
-              initial="out"
-              animate="in"
-              exit="exit"
-              key="home"
             >
               <Button
                 component={Link}
@@ -153,14 +119,7 @@ const NavModal = (props) => {
               container
               justifyContent="center"
               alignItems="center"
-              className={classes.navItem}
-              component={motion.div}
-              variants={navVariants}
-              initial="out"
-              animate="in"
-              exit="exit"
-              key="about"
-        
+              className={classes.navItem}        
             >
               <Button
                 className={classes.navText}
@@ -173,49 +132,20 @@ const NavModal = (props) => {
                 About
               </Button>
             </Grid>
+           
             <Grid
               item
               container
               justifyContent="center"
               alignItems="center"
               className={classes.navItem}
-              component={motion.div}
-              variants={navVariants}
-              initial="out"
-              animate="in"
-              exit="exit"
-              key="services"
-            >
-              <Button
-                className={classes.navText}
-                component={Link}
-                to="/services"
-                onClick={() => {props.setShowNavModal(false);changeActiveValue(2)}}
-                style={{color:active===2?theme.palette.text.main:"inherit"}}
-      
-              >
-                Services
-              </Button>
-            </Grid>
-            <Grid
-              item
-              container
-              justifyContent="center"
-              alignItems="center"
-              className={classes.navItem}
-              component={motion.div}
-              variants={navVariants}
-              initial="out"
-              animate="in"
-              exit="exit"
-              key="portfolio"
             >
               <Button
                 className={classes.navText}
                 component={Link}
                 to="/portfolio"
-                onClick={() => {props.setShowNavModal(false);changeActiveValue(3)}}
-                style={{color:active===3?theme.palette.text.main:"inherit"}}
+                onClick={() => {props.setShowNavModal(false);changeActiveValue(2)}}
+                style={{color:active===2?theme.palette.text.main:"inherit"}}
     
               >
                 Portfolio
@@ -226,28 +156,20 @@ const NavModal = (props) => {
               container
               justifyContent="center"
               alignItems="center"
-              className={classes.navItem}
-              component={motion.div}
-              variants={navVariants}
-              initial="out"
-              animate="in"
-              exit="exit"
-              key="contact"
-         
+              className={classes.navItem}         
             >
               <Button
                 className={classes.navText}
                 component={Link}
                 to="/contact"
-                onClick={() => {props.setShowNavModal(false);changeActiveValue(4)}}
-                style={{color:active===4?theme.palette.text.main:"inherit"}}
+                onClick={() => {props.setShowNavModal(false);changeActiveValue(3)}}
+                style={{color:active===3?theme.palette.text.main:"inherit"}}
            
               >
                 Contact
               </Button>
             </Grid>
-        </Grid>
-    </AnimatePresence>,document.getElementById('navModal')
+        </Grid>,document.getElementById('navModal')
     )}     
           </React.Fragment>
   );

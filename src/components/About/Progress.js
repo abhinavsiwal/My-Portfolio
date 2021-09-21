@@ -24,11 +24,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   button: {
-    backgroundColor: theme.palette.text.main,
+    ...theme.border,
     borderRadius: "20px",
-    color: theme.palette.secondary.main,
+    color: theme.palette.text.main,
     fontFamily: "pacifico",
     fontSize: "0.7rem",
+    padding:"0.5rem",
     "&:hover": {
       backgroundColor: theme.palette.text.light,
     },
@@ -226,7 +227,7 @@ const Progress = () => {
                 </Grid>
                 <Grid item>
                   <Button
-                    variant="contained"
+                    
                     component="a"
                     href="https://www.udemy.com/certificate/UC-40550d97-324d-463b-9f29-2ac2cb8cc9e0/"
                     target="_blank"
@@ -251,7 +252,7 @@ const Progress = () => {
                   >
                     Udemy Material-Ui Certificate
                   </Typography>
-                  <Button variant="contained" className={classes.button}>
+                  <Button  className={classes.button}>
                     View Certificate
                   </Button>
                 </Grid>
@@ -272,7 +273,7 @@ const Progress = () => {
                     HackerRank React Certificate
                   </Typography>
                   <Button
-                    variant="contained"
+                    
                     component="a"
                     href="https://www.hackerrank.com/certificates/f3be66cc0c49"
                     target="_black"
@@ -298,7 +299,7 @@ const Progress = () => {
                     HackeRrank CSS Certificate
                   </Typography>
                   <Button
-                    variant="contained"
+                    
                     component="a"
                     href="https://www.hackerrank.com/certificates/44a082d583c1"
                     target="_blank"
@@ -324,7 +325,7 @@ const Progress = () => {
                     HackeRrank Javascript Certificate
                   </Typography>
                   <Button
-                    variant="contained"
+                    
                     component="a"
                     href="https://www.hackerrank.com/certificates/7e87e925cad7"
                     target="_blank"

@@ -1,0 +1,59 @@
+[debug] [2021-09-21T10:23:11.929Z] ----------------------------------------------------------------------
+[debug] [2021-09-21T10:23:11.932Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Abhinav Siwal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2021-09-21T10:23:11.933Z] CLI Version:   9.18.0
+[debug] [2021-09-21T10:23:11.933Z] Platform:      win32
+[debug] [2021-09-21T10:23:11.933Z] Node Version:  v14.17.5
+[debug] [2021-09-21T10:23:11.962Z] Time:          Tue Sep 21 2021 15:53:11 GMT+0530 (India Standard Time)
+[debug] [2021-09-21T10:23:11.963Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-21T10:23:12.411Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-21T10:23:12.412Z] > authorizing via signed-in user (abhinavsiwal@gmail.com)
+[debug] [2021-09-21T10:23:12.412Z] [iam] checking project my-portfolio-61bfb for permissions ["firebase.projects.get"]
+[debug] [2021-09-21T10:23:12.441Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/my-portfolio-61bfb:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-09-21T10:23:14.256Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 21 Sep 2021 10:23:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1367","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-21T10:23:15.353Z] [functions] Using node@14 from host.
+[debug] [2021-09-21T10:23:15.357Z] defaultcredentials: writing to file C:\Users\Abhinav Siwal\AppData\Roaming\firebase\abhinavsiwal_gmail_com_application_default_credentials.json
+[debug] [2021-09-21T10:23:15.365Z] DEBUG: Setting GAC to C:\Users\Abhinav Siwal\AppData\Roaming\firebase\abhinavsiwal_gmail_com_application_default_credentials.json
+[debug] [2021-09-21T10:23:15.371Z] > refreshing access token with scopes: []
+[debug] [2021-09-21T10:23:15.372Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-21T10:23:15.757Z] <<< HTTP RESPONSE 200 {"date":"Tue, 21 Sep 2021 10:23:16 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-21T10:23:15.839Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-portfolio-61bfb/adminSdkConfig [none]
+[debug] [2021-09-21T10:23:16.814Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-portfolio-61bfb/adminSdkConfig 200
+[debug] [2021-09-21T10:23:16.815Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-portfolio-61bfb/adminSdkConfig {"projectId":"my-portfolio-61bfb","storageBucket":"my-portfolio-61bfb.appspot.com"}
+[debug] [2021-09-21T10:23:16.868Z] [functions] Watching "C:\Users\Abhinav Siwal\Desktop\My Portfolio Website\functions" for Cloud Functions...
+[debug] [2021-09-21T10:23:16.901Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2021-09-21T10:23:16.902Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2021-09-21T10:23:16.903Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2021-09-21T10:23:16.905Z] DEBUG: [worker-~diagnostic~-3fd846b5-b719-4bd3-b8fc-d7a8739aa6f9]: Assigning socketPath: \\?\pipe\C:\Users\Abhinav Siwal\Desktop\My Portfolio Website\functions\2124
+[debug] [2021-09-21T10:23:16.907Z] DEBUG: [worker-~diagnostic~-3fd846b5-b719-4bd3-b8fc-d7a8739aa6f9]: BUSY
+[debug] [2021-09-21T10:23:18.357Z] DEBUG: [runtime-status] [2124] Functions runtime initialized. {"cwd":"C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions","node_version":"14.17.5"}
+[debug] [2021-09-21T10:23:18.375Z] DEBUG: [runtime-status] [2124] Disabled runtime features: undefined
+[debug] [2021-09-21T10:23:18.408Z] DEBUG: [runtime-status] [2124] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2021-09-21T10:23:18.419Z] DEBUG: [runtime-status] [2124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.7","resolution":"C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-09-21T10:23:18.425Z] DEBUG: [runtime-status] [2124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.7","resolution":"C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-09-21T10:23:18.430Z] DEBUG: [runtime-status] [2124] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-09-21T10:23:18.437Z] DEBUG: [runtime-status] [2124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.7","resolution":"C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-09-21T10:23:18.647Z] DEBUG: [runtime-status] [2124] Checked functions.config() {"config":{}}
+[debug] [2021-09-21T10:23:18.648Z] DEBUG: [runtime-status] [2124] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.15.7","resolution":"C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2021-09-21T10:23:18.652Z] DEBUG: [runtime-status] [2124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.7","resolution":"C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-09-21T10:23:18.657Z] DEBUG: [runtime-status] [2124] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2021-09-21T10:23:18.660Z] DEBUG: [runtime-status] [2124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.7","resolution":"C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-09-21T10:23:18.661Z] DEBUG: [runtime-status] [2124] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.11.1","resolution":"C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[debug] [2021-09-21T10:23:18.834Z] DEBUG: [runtime-status] [2124] initializeApp(DEFAULT) {"storageBucket":"my-portfolio-61bfb.appspot.com","projectId":"my-portfolio-61bfb"}
+[warn] !  It looks like you're trying to access functions.config().user but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator {"metadata":{"emulator":{"name":"functions"},"message":"It looks like you're trying to access functions.config().user but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator"}}
+[warn] !  TypeError: Cannot read property 'email' of undefined
+    at Object.<anonymous> (C:\Users\Abhinav Siwal\Desktop\My Portfolio Website\functions\index.js:11:29)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at initializeRuntime (C:\Users\Abhinav Siwal\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:715:29)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async handleMessage (C:\Users\Abhinav Siwal\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:759:20) {"metadata":{"emulator":{"name":"functions"},"message":"TypeError: Cannot read property 'email' of undefined\n    at Object.<anonymous> (C:\\Users\\Abhinav Siwal\\Desktop\\My Portfolio Website\\functions\\index.js:11:29)\n    at Module._compile (internal/modules/cjs/loader.js:1072:14)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)\n    at Module.load (internal/modules/cjs/loader.js:937:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:778:12)\n    at Module.require (internal/modules/cjs/loader.js:961:19)\n    at require (internal/modules/cjs/helpers.js:92:18)\n    at initializeRuntime (C:\\Users\\Abhinav Siwal\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:715:29)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)\n    at async handleMessage (C:\\Users\\Abhinav Siwal\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:759:20)"}}
+[warn] !  We were unable to load your functions code. (see above) {"metadata":{"emulator":{"name":"functions"}}}
+[debug] [2021-09-21T10:23:18.883Z] DEBUG: [worker-~diagnostic~-3fd846b5-b719-4bd3-b8fc-d7a8739aa6f9]: exited
+[debug] [2021-09-21T10:23:18.884Z] DEBUG: [worker-~diagnostic~-3fd846b5-b719-4bd3-b8fc-d7a8739aa6f9]: FINISHED

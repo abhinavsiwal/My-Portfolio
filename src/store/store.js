@@ -10,8 +10,12 @@ const ThemeContext=React.createContext({
 export const ThemeContextProvider=(props)=>{
     const [theme, setTheme] = useState("");
     const [active, setActive] = useState("");
-    useEffect(() => {
+
+    useEffect(()=>{
         setTheme(0);
+    },[]);
+
+    useEffect(() => {
         switch(window.location.pathname){
             case "/":
                 if(active!==0){
@@ -23,19 +27,14 @@ export const ThemeContextProvider=(props)=>{
                     setActive(1);
                 }
                 break;
-            case "/services":
+            case "/portfolio":
                 if(active!==2){
                     setActive(2);
                 }
                 break;
-            case "/portfolio":
+            case "/contact":
                 if(active!==3){
                     setActive(3);
-                }
-                break;
-            case "/contact":
-                if(active!==4){
-                    setActive(4);
                 }
                 break;
             default:

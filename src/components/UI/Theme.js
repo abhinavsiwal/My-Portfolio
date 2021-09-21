@@ -59,6 +59,7 @@ const Theme = createTheme({
     },
     secondary: {
       main: theme.secondary,
+      light:"#F3EFFF"
     },
     text: {
       main: theme.text,
@@ -111,6 +112,7 @@ export const Theme1 = createTheme({
     },
     secondary: {
       main: theme1.secondary,
+      light:"#F3EFFF"
     },
     text: {
       main: theme1.text,
@@ -164,6 +166,7 @@ export const Theme2 = createTheme({
     },
     secondary: {
       main: theme2.secondary,
+      light:"#F3EFFF"
     },
     text: {
       main: theme2.text,
@@ -217,6 +220,7 @@ export const Theme3 = createTheme({
     },
     secondary: {
       main: theme3.secondary,
+      light:"#F3EFFF"
     },
     text: {
       main: theme3.text,
@@ -269,6 +273,7 @@ export const Theme4 = createTheme({
     },
     secondary: {
       main: theme4.secondary,
+      light:"#F3EFFF",
     },
     text: {
       main: theme4.text,
@@ -321,6 +326,7 @@ export const Theme5 = createTheme({
     },
     secondary: {
       main: theme5.secondary,
+      light:"#F3EFFF",
     },
     text: {
       main: theme5.text,
