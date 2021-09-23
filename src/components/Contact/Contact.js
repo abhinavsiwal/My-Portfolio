@@ -136,7 +136,7 @@ const Contact = () => {
                 <Typography variant="h5" align="center" style={{lineHeight:1}}>Contact Me</Typography>
               </Grid>
               <Grid item>
-                <Typography variant="h3" style={{ fontSize: "3rem" }}>
+                <Typography variant="h3" style={{ fontSize: "3rem",marginBottom:"3rem" }}>
                   Get in Touch
                 </Typography>
               </Grid>
@@ -145,7 +145,7 @@ const Contact = () => {
                   container
                   direction="column"
                   style={{ marginTop: "0.5rem" }}
-                  alignItems="center"
+                  alignItems="flex-start"
                 >
                   <Grid item>
                     <Grid
@@ -156,7 +156,7 @@ const Contact = () => {
                     >
                       <Grid
                         item
-                        style={{ marginTop: "10px", marginRight: "0.5rem" }}
+                        style={{ marginTop: "7px", marginRight: "0.5rem" }}
                       >
                         <PhoneIcon
                           style={{
@@ -189,7 +189,7 @@ const Contact = () => {
                       direction="row"
                       justifyContent="center"
                       alignItems="center"
-                      style={{ marginTop: "-10px" }}
+                      style={{ marginTop: "-12px" }}
                     >
                       <Grid
                         item
@@ -221,7 +221,7 @@ const Contact = () => {
                     </Grid>
                   </Grid>
                   <Grid item>
-                    <Grid container direction="row" alignItems="center" justifyContent="center" style={{marginTop:"0.5rem"}}>
+                    <Grid container direction="row" alignItems="center" justifyContent="center" style={{marginTop:"0px",marginBottom:"3rem"}}>
                       <Grid item>
                         <IconButton
                           component="a"

@@ -15,6 +15,8 @@ import Lottie from "react-lottie";
 import homeAnimation from "../../animations/person2.json";
 import rocketAnimation from "../../animations/tree.json";
 import animation from "../../animations/parachute.json";
+import mobileAnimation1 from "../../animations/boat.json";
+import mobileAnimation2 from "../../animations/icons-blast.json"
 
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -24,10 +26,10 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 const useStyles = makeStyles((theme) => ({
   container: {
     height: "100%",
-    minHeight:"100vh",
+    minHeight: "100vh",
     width: "100%",
     backgroundColor: theme.palette.primary.main,
-    paddingBottom:"2rem"
+    paddingBottom: "2rem",
   },
   animationContainer: {
     ...theme.border,
@@ -65,8 +67,15 @@ const useStyles = makeStyles((theme) => ({
     top: "5px",
     left: "20em",
     width: "14em",
-    height: "8em",
+    height: "7em",
   },
+    mobileAnimation:{
+      // position:"absolute",
+      // top:"19em",
+      // left:3,
+      height:"7rem",
+      width:"11rem",
+    }
 }));
 
 const defaultOptions = {
@@ -89,6 +98,22 @@ const options = {
   loop: true,
   autoplay: true,
   animationData: animation,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+const mobileAnimation1Options = {
+  loop: true,
+  autoplay: true,
+  animationData: mobileAnimation1,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+const mobileAnimation2Options = {
+  loop: true,
+  autoplay: true,
+  animationData: mobileAnimation2,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
   },
@@ -196,7 +221,7 @@ const Home = (props) => {
                     : "3rem",
                 }}
               >
-                A Full Stack Web Developer
+                A Full Stack {matchesXS?<br />:""} Web Developer
               </Typography>
             </Grid>
             <Grid
@@ -212,7 +237,15 @@ const Home = (props) => {
               </Button>
             </Grid>
             <Grid item>
-              <Grid container direction="row" style={{ marginTop: "1rem" }} component={motion.div} initial={{x:"-900px"}} animate={{x:0}} transition={{duration:1,delay:2}}>
+              <Grid
+                container
+                direction="row"
+                style={{ marginTop: "1rem" }}
+                component={motion.div}
+                initial={{ x: "-900px" }}
+                animate={{ x: 0 }}
+                transition={{ duration: 1, delay: 2 }}
+              >
                 <Grid item>
                   <IconButton
                     component="a"
@@ -271,6 +304,30 @@ const Home = (props) => {
                 </Grid>
               </Grid>
             </Grid>
+          </Grid>
+        </Grid>
+        <Grid item container direction="row" justifyContent="space-between">
+          <Grid item>
+          <Hidden mdUp>
+            <Container className={classes.mobileAnimation}>
+              <Lottie
+                options={mobileAnimation1Options}
+                height={"100%"}
+                width={"100%"}
+              />
+            </Container>
+          </Hidden>
+          </Grid>
+          <Grid item>
+          <Hidden mdUp>
+            <Container className={classes.mobileAnimation}>
+              <Lottie
+                options={mobileAnimation2Options}
+                height={"100%"}
+                width={"100%"}
+              />
+            </Container>
+          </Hidden>
           </Grid>
         </Grid>
         <Grid

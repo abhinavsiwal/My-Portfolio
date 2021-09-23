@@ -10,7 +10,7 @@ import ThemeSetting from "./components/Header/ThemeSetting";
 import NavModal from "./components/Header/NavModal";
 import About from "./components/About/About";
 import Portfolio from "./components/Portfolio/Portfolio";
-import Contact from "./components/Contact/Contact";
+import Contact1 from "./components/Contact/Contact";
 
 const App = () => {
   const themeCtx = useContext(ThemeContext);
@@ -54,7 +54,7 @@ const App = () => {
         {!showNavModal && <Portfolio />}
         </Route>
         <Route path="/contact" exact>
-          <Contact />
+          <Contact1 />
         </Route>
 
       </Switch>
