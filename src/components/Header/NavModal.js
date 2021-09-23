@@ -109,7 +109,7 @@ const NavModal = (props) => {
                 to="/"
                 className={classes.navText}
                 onClick={() => {props.setShowNavModal(false);changeActiveValue(0)}}
-                style={{color:active===0?theme.palette.text.main:"inherit"}}
+                style={{color:active===0?theme.palette.text.main:theme.palette.secondary.main}}
               >
                 Home
               </Button>
@@ -126,7 +126,7 @@ const NavModal = (props) => {
                 component={Link}
                 to="/about"
                 onClick={() => {props.setShowNavModal(false);changeActiveValue(1)}}
-                style={{color:active===1?theme.palette.text.main:"inherit"}}
+                style={{color:active===1?theme.palette.text.main:theme.palette.secondary.main}}
             
               >
                 About
@@ -145,7 +145,7 @@ const NavModal = (props) => {
                 component={Link}
                 to="/portfolio"
                 onClick={() => {props.setShowNavModal(false);changeActiveValue(2)}}
-                style={{color:active===2?theme.palette.text.main:"inherit"}}
+                style={{color:active===2?theme.palette.text.main:theme.palette.secondary.main}}
     
               >
                 Portfolio
@@ -163,7 +163,7 @@ const NavModal = (props) => {
                 component={Link}
                 to="/contact"
                 onClick={() => {props.setShowNavModal(false);changeActiveValue(3)}}
-                style={{color:active===3?theme.palette.text.main:"inherit"}}
+                style={{color:active===3?theme.palette.text.main:theme.palette.secondary.main}}
            
               >
                 Contact
