@@ -18,7 +18,7 @@ const App = () => {
   const [isLoading, setLoading] = useState(true);
 
   function fakeRequest() {
-    return new Promise(resolve => setTimeout(() => resolve(), 2500));
+    return new Promise(resolve => setTimeout(() => resolve(), 1000));
   }
   useEffect(() => {
     fakeRequest().then(() => {
