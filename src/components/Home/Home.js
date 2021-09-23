@@ -322,12 +322,12 @@ const Home = (props) => {
           </Grid>
         </Hidden>
         <Hidden mdDown>
-          <Grid item style={{display:matchesXS?"none":"block"}}>
+          <Grid item >
             <Grid
               container
               direction="column"
               justifyContent="space-between"
-              style={{ height: matchesXS?0:"100vh",display:matchesXS?"none":"block" }}
+              style={{ height:"100vh" }}
             >
               <Grid item >
                 <Hidden mdDown>
@@ -336,7 +336,7 @@ const Home = (props) => {
                   </Container>
                 </Hidden>
               </Grid>
-              <Grid item style={{display:matchesXS?"none":"block"}}>
+              <Grid item >
               <Hidden mdDown>
                 <Container className={classes.animationDiv}>
                   <Lottie
