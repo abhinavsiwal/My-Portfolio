@@ -225,7 +225,7 @@ const Contact = () => {
                       <Grid item>
                         <IconButton
                           component="a"
-                          href="https://www.instagram.com/abhinav_siwal8/"
+                          href="https://www.instagram.com/abhinav_siwal/"
                           target="_blank"
                         >
                           <InstagramIcon

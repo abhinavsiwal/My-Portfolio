@@ -238,7 +238,7 @@ const Home = (props) => {
                 <Grid item>
                   <IconButton
                     component="a"
-                    href="https://www.instagram.com/abhinav_siwal8/"
+                    href="https://www.instagram.com/abhinav_siwal/"
                     target="_blank"
                   >
                     <InstagramIcon
@@ -321,22 +321,22 @@ const Home = (props) => {
             </Grid>
           </Grid>
         </Hidden>
-        <Hidden>
-          <Grid item>
+        <Hidden mdDown>
+          <Grid item style={{display:matchesXS?"none":"block"}}>
             <Grid
               container
               direction="column"
               justifyContent="space-between"
-              style={{ height: "100vh" }}
+              style={{ height: matchesXS?0:"100vh",display:matchesXS?"none":"block" }}
             >
-              <Grid item>
+              <Grid item >
                 <Hidden mdDown>
                   <Container className={classes.animationDiv}>
                     <Lottie options={options} height={"100%"} width={"100%"} />
                   </Container>
                 </Hidden>
               </Grid>
-              <Grid item>
+              <Grid item style={{display:matchesXS?"none":"block"}}>
               <Hidden mdDown>
                 <Container className={classes.animationDiv}>
                   <Lottie
