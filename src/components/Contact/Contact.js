@@ -374,6 +374,7 @@ const Contact = () => {
                       focused: classes.textFieldOutline,
                       notchedOutline: classes.textFieldOutline,
                     },
+                    style:{padding:"18.5px 19px"}
                   }}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
