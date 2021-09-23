@@ -16,7 +16,7 @@ import homeAnimation from "../../animations/person2.json";
 import rocketAnimation from "../../animations/tree.json";
 import animation from "../../animations/parachute.json";
 import mobileAnimation1 from "../../animations/boat.json";
-import mobileAnimation2 from "../../animations/icons-blast.json"
+import mobileAnimation2 from "../../animations/icons-blast.json";
 
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -45,15 +45,7 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: "19em",
     },
   },
-  rocketDiv: {
-    heigth: "12em",
-    width: "12em",
-    position: "absolute",
-    bottom: "2em",
-    left: "18em",
-    backgroundColor: theme.palette.primary.main,
-    borderRadius: "50%",
-  },
+
   aboutButton: {
     ...theme.border,
     color: theme.palette.text.main,
@@ -63,19 +55,16 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
   },
   animationDiv: {
-    position: "absolute",
-    top: "5px",
-    left: "20em",
-    width: "14em",
-    height: "7em",
+    width: "9em",
+    height: "12em",
   },
-    mobileAnimation:{
-      // position:"absolute",
-      // top:"19em",
-      // left:3,
-      height:"7rem",
-      width:"11rem",
-    }
+  mobileAnimation: {
+    // position:"absolute",
+    // top:"19em",
+    // left:3,
+    height: "7rem",
+    width: "11rem",
+  },
 }));
 
 const defaultOptions = {
@@ -221,7 +210,7 @@ const Home = (props) => {
                     : "3rem",
                 }}
               >
-                A Full Stack {matchesXS?<br />:""} Web Developer
+                A Full Stack {matchesXS ? <br /> : ""} Web Developer
               </Typography>
             </Grid>
             <Grid
@@ -306,30 +295,61 @@ const Home = (props) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item container direction="row" justifyContent="space-between">
-          <Grid item>
-          <Hidden mdUp>
-            <Container className={classes.mobileAnimation}>
-              <Lottie
-                options={mobileAnimation1Options}
-                height={"100%"}
-                width={"100%"}
-              />
-            </Container>
-          </Hidden>
+        <Hidden mdUp>
+          <Grid item container direction="row" justifyContent="space-between">
+            <Grid item>
+              <Hidden mdUp>
+                <Container className={classes.mobileAnimation}>
+                  <Lottie
+                    options={mobileAnimation1Options}
+                    height={"100%"}
+                    width={"100%"}
+                  />
+                </Container>
+              </Hidden>
+            </Grid>
+            <Grid item>
+              <Hidden mdUp>
+                <Container className={classes.mobileAnimation}>
+                  <Lottie
+                    options={mobileAnimation2Options}
+                    height={"100%"}
+                    width={"100%"}
+                  />
+                </Container>
+              </Hidden>
+            </Grid>
           </Grid>
+        </Hidden>
+        <Hidden>
           <Grid item>
-          <Hidden mdUp>
-            <Container className={classes.mobileAnimation}>
-              <Lottie
-                options={mobileAnimation2Options}
-                height={"100%"}
-                width={"100%"}
-              />
-            </Container>
-          </Hidden>
+            <Grid
+              container
+              direction="column"
+              justifyContent="space-between"
+              style={{ height: "100vh" }}
+            >
+              <Grid item>
+                <Hidden mdDown>
+                  <Container className={classes.animationDiv}>
+                    <Lottie options={options} height={"100%"} width={"100%"} />
+                  </Container>
+                </Hidden>
+              </Grid>
+              <Grid item>
+              <Hidden mdDown>
+                <Container className={classes.animationDiv}>
+                  <Lottie
+                    options={rocketOptions}
+                    height={"100%"}
+                    width={"100%"}
+                  />
+                </Container>
+              </Hidden>
+            </Grid>
+            </Grid>
           </Grid>
-        </Grid>
+        </Hidden>
         <Grid
           item
           container
@@ -369,24 +389,6 @@ const Home = (props) => {
           </Grid>
         </Grid>
       </Grid>
-      <Hidden mdDown>
-        <Container className={classes.rocketDiv}>
-          <Lottie
-            options={rocketOptions}
-            height={matchesSM ? "10em" : "12em"}
-            width={matchesSM ? "10em" : "12em"}
-          />
-        </Container>
-      </Hidden>
-      <Hidden mdDown>
-        <Container className={classes.animationDiv}>
-          <Lottie
-            options={options}
-            height={matchesSM ? "6em" : "8em"}
-            width={matchesSM ? "10em" : "14em"}
-          />
-        </Container>
-      </Hidden>
     </React.Fragment>
   );
 };

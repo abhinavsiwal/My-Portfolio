@@ -2,11 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /> 
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
+  <meta name="description" key="description" content="Abhinav Siwal, I am a 20 years old tech enthusiast exploring carrer in the field of Computer Sceince.I am passionate about Web Development and love to code beautiful and attractive things." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abhinav Siwal" />
+  <meta property="og:url" content="abhinavsiwal.me" />
+  <meta property="og:image" content="https://i.imgur.com/48FXryK.jpg" />
+  <meta property="og:image:type" content="image/jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Website Logo" />
+
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -29,14 +37,29 @@
     rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <title>React App</title>
+
+  <title>Abhinav Siwal</title>
+  <style>
+    .loader-container{
+      height:100vh; 
+      width:100v;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="navModal"></div>
   <div id="root"></div>
+  <div class="loader-container">
+    <div class="loader-img">
+      <img src="./load.gif" alt="Loading gif" height="200px" width="200px">
+    </div>
+  </div>
   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

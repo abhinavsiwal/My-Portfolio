@@ -12,7 +12,9 @@ export const ThemeContextProvider=(props)=>{
     const [active, setActive] = useState("");
 
     useEffect(()=>{
-        setTheme(0);
+        const storedValue=localStorage.getItem('theme');
+        const value=parseInt(storedValue);
+        setTheme(value);
     },[]);
 
     useEffect(() => {
@@ -44,6 +46,7 @@ export const ThemeContextProvider=(props)=>{
 
     const changeTheme=(value)=>{
         setTheme(value);
+        localStorage.setItem('theme',value);
     };
     const changeActiveValue=(value)=>{
         setActive(value);

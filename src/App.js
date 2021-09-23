@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState,useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 
@@ -15,6 +15,25 @@ import Contact1 from "./components/Contact/Contact";
 const App = () => {
   const themeCtx = useContext(ThemeContext);
   const [showNavModal, setShowNavModal] = useState(false);
+  const [isLoading, setLoading] = useState(true);
+
+  function fakeRequest() {
+    return new Promise(resolve => setTimeout(() => resolve(), 2500));
+  }
+  useEffect(() => {
+    fakeRequest().then(() => {
+      const el = document.querySelector(".loader-container");
+      if (el) {
+        el.remove();
+        setLoading(!isLoading);
+      }
+    });
+  }, [isLoading]);
+
+  if (isLoading) {
+    return null;
+  }
+
   let theme;
 
   if (themeCtx.theme === 0) {
@@ -36,6 +55,8 @@ const App = () => {
     theme = Theme5;
   }
 
+
+  
   return (
     <ThemeProvider theme={theme?theme:Theme}>
       <ThemeSetting
